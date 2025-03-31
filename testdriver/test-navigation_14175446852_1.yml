@@ -1,0 +1,13 @@
+version: 4.2.25
+session: 67eab8c9c68a08483d029fa2
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on "Kontakt" in the top navigation menu.
+    commands:
+      - command: hover-text
+        text: Kontakt
+        description: contact option in the top navigation menu
+        action: click
