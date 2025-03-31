@@ -1,0 +1,54 @@
+version: 4.2.25
+session: 67eab8d8c68a08483d029fa6
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Suche" icon in the top navigation.
+    commands:
+      - command: hover-text
+        text: Suche
+        description: search icon in the top navigation
+        action: click
+  - prompt: Enter "hypotheken" in the search input field.
+    commands:
+      - command: hover-text
+        text: Suche
+        description: search icon in the top navigation
+        action: click
+      - command: type
+        text: hypotheken
+  - prompt: Enter "hypotheken" in the search input field.
+    commands:
+      - command: hover-text
+        text: Suche
+        description: search icon in the top navigation
+        action: click
+      - command: hover-text
+        text: Zustimmen
+        description: cookie consent button
+        action: click
+      - command: type
+        text: hypotheken
+  - prompt: Enter "hypotheken" in the search input field.
+    commands:
+      - command: hover-text
+        text: Suche
+        description: search icon in the top navigation
+        action: click
+      - command: hover-text
+        text: Suchbegriff eingeben
+        description: search input field
+        action: click
+      - command: type
+        text: hypotheken
+  - prompt: Press the "Enter" key.
+    commands:
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Assert that search results related to "hypotheken" are displayed.
+    commands:
+      - command: assert
+        expect: search results for 'hypotheken' are displayed
